@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h3>Index page</h3>
+    <!--CSRF:Cross Site Request Forgery-->
+    {{% csrf_token %}}
+    <form action="{% url 'post_queries' %}" method="POST">
+        <input type="text" id="uname">Enter Username</input>
+        <input type="text" id="query">Enter Query</input>
+      <button type="submit">Add Query</button>
+    </form>
+  </body>
+</html>
